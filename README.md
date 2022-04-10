@@ -68,3 +68,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Updating react to version 18
+
+### `npm install react@18 react-dom@18`
+
+This updates react to newest version
+
+After that change in index.js:
+
+#### ReactDOM.render(
+####  <React.StrictMode>
+####    <App />
+####  </React.StrictMode>,
+####  document.getElementById('root')
+#### );
+
+with:
+
+#### const root = ReactDOM.createRoot(document.getElementById('root'));
+#### root.render(<App />);
